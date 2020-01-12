@@ -2,14 +2,28 @@
 <html>
 <head>
     <title>E-nan's Page</title>
-    <!--<script src="main.js" type="text/javascript"/>-->
+    <!--<script src="main.js"/>-->
 </head>
 <body>
     <p>BODY 테스트 </p>
     
     
-    <button type = "button" onclick = 'document.getElementById("demo").src = "img/enan.png"'>Click Me~</button>
-    <img id = "demo" src = "" style = "width : 100px">
+    <button id = "btn" type = "button" onclick = 'myFunc()'>Click Me~</button>
+    <script>
+        var cnt = 1;
+        function myFunc()
+        {
+            var imgStyle = "Width:";
+            
+            if(cnt<5)
+            {
+                imgStyle += 200 * cnt + px;
+                document.getElementById("demo").style = imgStyle;
+                cnt++;
+            }
+        }
+    </script>
+    <img id = "demo" src = "img/enan.png" style = "width : 100px">
     
 </body>
 </html>
